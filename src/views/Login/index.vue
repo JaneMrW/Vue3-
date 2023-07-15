@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2023-07-10 15:40:57
- * @LastEditTime: 2023-07-13 22:56:58
+ * @LastEditTime: 2023-07-15 13:07:05
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \blogSystem\src\views\bug\index.vue
@@ -14,24 +14,24 @@
       <div class="loginTitle">博客管理系统</div>
       <el-form
         :model="loginForm"
-        label-width="50px"
+        label-width="70px"
         :rules="loginRules"
         ref="loginFormRef"
       >
-        <el-form-item label="账户" name="userName">
+        <el-form-item label="账户" prop="userName">
           <el-input
             v-model="loginForm.userName"
-            style="width: 315px"
+            style="width: 300px"
             placeholder="请输入账户"
             clearable
           >
           </el-input>
         </el-form-item>
-        <el-form-item label="密码" name="userPassWord">
+        <el-form-item label="密码" prop="userPassWord">
           <el-input
             type="password"
             v-model="loginForm.userPassWord"
-            style="width: 315px"
+            style="width: 300px"
             placeholder="请输入密码"
             clearable
           />
@@ -47,32 +47,29 @@
 <script setup>
 import { reactive, ref, toRaw } from "vue";
 import { Calendar, User } from "@element-plus/icons-vue";
+import { ElMessage } from "element-plus";
 // 登录逻辑
-const loginFormRef= ref();
-const loginForm = reactive({userName:'', userPassWord:''});
+const loginFormRef = ref();
+const loginForm = reactive({ userName: "", userPassWord: "" });
+
 const loginRules = reactive({
   userName: [
-    {
-      required:true,
-      message: "请输入用户名",
-      trigger: "blur",
-    },
+    { required: true, message: "请输入用户名", trigger: "blur" },
   ],
   userPassWord: [
-    {
-      required:true,
-      message: "请输入用户名",
-      trigger: "blur",
-    },
+    { required: true, message: "请输入密码", trigger: "blur" },
   ],
 });
 //验证通过函数
 const onSubmit = () => {
+  console.log("用户登录了");
+  // console.log(loginFormRef,'loginFormRef');
   loginFormRef.value.validate().then(() => {
+    debugger;
     console.log(toRaw(loginForm));
-  })
-}
-
+  });
+  // console.log('e',e);
+};
 </script>
 
 <style lang="less">
@@ -90,7 +87,7 @@ const onSubmit = () => {
   position: absolute;
   top: 30%;
   left: 42%;
-  // background: rgb(241, 240, 237);
+  background: rgb(234, 247, 248);
   border-radius: 5px;
 
   .loginTitle {
