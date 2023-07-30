@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2023-07-10 15:27:50
- * @LastEditTime: 2023-07-11 21:14:50
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-30 22:55:52
+ * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \blogSystem\src\router\index.js
  */
@@ -11,30 +11,28 @@ import {
     createWebHashHistory
 } from 'vue-router'
 
-const routes = [{
+const routes = [
+    {
         path: '/',
-        name: 'home',
-        component: () => import('../views/Home/index.vue'),
+        redirect: '/login' //重定向到登录组件
+        // name: 'home',
+        // component: () => import('../views/Home/index.vue'),
     },
     {
         path: '/login',
         name: 'Login',
         component: () => import('../views/Login/index.vue'),
-    }, {
-        path: '/floatW',
-        name: 'FloatW',
-        component: () => import('../views/floatW/floatW.vue'),
+    }, 
+    {
+        path: '/card',
+        name: 'Card',
+        component: () => import('../views/card/index.vue'),
     },
     {
-        path: '/bigB',
-        name: 'BigB',
-        component: () => import('../views/bigB/bigB.vue'),
+        path: '/home',
+        name: 'Home',
+        component: () => import('../views/home/index.vue'),
     },
-    {
-        path: '/yaow',
-        name: 'YaoW',
-        component: () => import('../views/YaoW/YaoW.vue'),
-    }
 ];
 
 const router = createRouter({
