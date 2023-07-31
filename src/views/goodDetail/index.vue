@@ -1,21 +1,21 @@
 <!--
  * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @Date: 2023-07-13 23:06:53
+ * @Date: 2023-07-31 16:15:13
  * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2023-07-31 07:27:45
- * @FilePath: \blogSystem\index.html
+ * @LastEditTime: 2023-07-31 16:56:33
+ * @FilePath: \blogSystem\src\views\goodDetail\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Merchant backend</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+<template>
+  <div>
+    <h1>商品详情页面</h1>
+  </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style>
+
+</style>

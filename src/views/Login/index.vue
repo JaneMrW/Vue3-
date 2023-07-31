@@ -1,17 +1,17 @@
 <!--
  * @Author: your name
  * @Date: 2023-07-10 15:40:57
- * @LastEditTime: 2023-07-30 22:56:15
+ * @LastEditTime: 2023-07-31 13:22:39
  * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \blogSystem\src\views\bug\index.vue
 -->
 <template>
   <div class="container">
-    <img class="backImg" src="../../assets/login.jpg" alt />
+    <img class="backImg" src="../../assets/img/login.jpg" alt />
     <!-- 登录框 -->
     <div class="loginModal">
-      <div class="loginTitle">博客管理系统</div>
+      <div class="loginTitle">Merchant backend</div>
       <el-form :model="loginForm" label-width="70px" :rules="loginRules" ref="loginFormRef">
         <el-form-item label="账户" prop="userName">
           <el-input v-model="loginForm.userName" style="width: 300px" placeholder="请输入账户" clearable></el-input>
