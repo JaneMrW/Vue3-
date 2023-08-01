@@ -1,8 +1,8 @@
 <template>
   <!-- 顶部 -->
-  <el-row>
+  <el-row class="el-row">
     <el-col class="el-col" :span="6" v-for="item in cardData" :key="item.id">
-      <el-card class="boxBotton" shadow="hover" @click="goToDetails">
+      <el-card  shadow="hover" @click="goToDetails(item)">
         <!-- @mouseleave="visible = !visible,curId=''" -->
         <!-- @mouseenter="mouseEnterCard(item)" -->
         <!-- 单个卡片 -->
@@ -110,10 +110,16 @@ const cardData = [
     price: "200"
   }
 ];
-const goToDetails = () => {
+const goToDetails = (item) => {
   console.log("??????");
   router.push({
-    path: "b"
+    name: "GoodDetail",
+    //参数
+    query:{
+      goodPrice:item.price,
+      goodName:item.goodName,
+      goodSize:item.size,
+    }
   });
 };
 //鼠标移入card事件
@@ -123,18 +129,27 @@ const mouseEnterCard = item => {
 };
 </script>
 <style lang="less">
-.el-col {
-  width: 478px;
-  height: 112px;
+.el-row {
+  padding: 10px;
+}
+.el-col el-col-6 el-col {
+  padding: 10px;
 }
 .cardContainer {
   display: flex;
+  height: 65px;
   .imageStyle {
     width: 65px;
     height: 65px;
   }
   .goodName {
+    width: 300px;
     font-size: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .size {
     font-weight: bold;
@@ -148,9 +163,6 @@ const mouseEnterCard = item => {
   // color: #868686;
   font-size: 16px;
   cursor: pointer;
-  .allbaseImg {
-    margin-left: -11px;
-  }
 }
 .allBase:hover {
   color: #ff1976d2;
