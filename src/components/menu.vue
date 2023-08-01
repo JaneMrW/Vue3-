@@ -2,7 +2,7 @@
  * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Date: 2023-08-01 14:48:54
  * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2023-08-01 16:58:27
+ * @LastEditTime: 2023-08-01 23:02:13
  * @FilePath: \blogSystem\src\components\menu.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -14,27 +14,23 @@
         <div class="logoTitle">商家后台</div>
       </div>
     </div>
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
-    >
+    <el-menu default-active="2" class="el-menu-vertical-demo">
       <el-menu-item index="1">
         <template #title>
           <el-icon>
             <HomeFilled />
           </el-icon>
-          <router-link :to="{name:Home}">
-            <span>后台首页</span>
-          </router-link>
+            <span>首页</span>
         </template>
       </el-menu-item>
       <el-menu-item index="2">
         <el-icon>
           <icon-menu />
         </el-icon>
-        <span>Navigator Two</span>
+        <!-- <span>Navigator Two</span> -->
+        <router-link :to="{path:'/card'}">
+          <span>shop</span>
+        </router-link>
       </el-menu-item>
       <el-menu-item index="3" disabled>
         <el-icon>
