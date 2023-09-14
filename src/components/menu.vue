@@ -2,12 +2,12 @@
  * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Date: 2023-08-01 14:48:54
  * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2023-08-01 23:02:13
+ * @LastEditTime: 2023-08-02 08:26:17
  * @FilePath: \blogSystem\src\components\menu.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <el-aside style="width:200px">
+  <el-aside style="width:200px;height:100%">
     <div class="topLogo">
       <div class="logoContainer">
         <img class="logo" src="../assets/img/indexLogin.jpg" />
@@ -42,7 +42,7 @@
         <el-icon>
           <setting />
         </el-icon>
-        <span>Navigator Four</span>
+        <span>vue面试题</span>
       </el-menu-item>
     </el-menu>
   </el-aside>
